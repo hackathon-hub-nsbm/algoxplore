@@ -13,9 +13,10 @@ export default function Home() {
   const tabs: Array<string> = [
     "ALGXPLR",
     "TIMELINE",
-    "REGISTERATION",
+    "REGISTRATION",
     "ABOUT_US",
   ];
+
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   const handleKeyDown = useCallback(
@@ -109,7 +110,7 @@ export default function Home() {
             <div className="ml-auto overflow-y-auto z-50 terminal_right">
               {activeTab === "ALGXPLR" && <About />}
               {activeTab === "TIMELINE" && <TimeLine />}
-              {activeTab === "REGISTERATION" && <RegistrationForm />}
+              {activeTab === "REGISTRATION" && <RegistrationForm />}
               {activeTab === "SPONSORS" && <Sponsors />}
               {activeTab === "ABOUT_US" && <div>About Us</div>}
             </div>

@@ -1,3 +1,4 @@
+import Art from "@/components/art";
 import React from "react";
 
 export default function Timeline() {
@@ -67,6 +68,7 @@ export default function Timeline() {
           ))}
         </div>
       </div>
+      <Art tab="TIMELINE" />
     </div>
   );
 }
