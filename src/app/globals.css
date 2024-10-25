@@ -27,6 +27,7 @@ body {
 
 .terminal {
   padding: 30px;
+  height: 48vw;
   width: 96vw;
   border: 1px #38ac38 dashed;
 }
@@ -317,6 +318,33 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+  .mascotDisplay {
+    visibility: hidden;
+  }
+
+  .terminal {
+    padding: 30px;
+    height: auto;
+    width: auto;
+    border: 1px #38ac38 dashed;
+  }
+
+  .art_container {
+    position: absolute;
+    visibility: hidden;
+    /* Use absolute positioning */
+    bottom: 0;
+    right: 0;
+    /* Align to the right */
+    /* display: flex; */
+    /* justify-conteent: center; */
+    align-items: center;
+    margin: 20px;
+    /* Example margin */
+    animation: blink-animation 1s infinite;
+    /* Apply the animation */
+  }
+
   .header {
     left: 40px;
     right: 40px;
@@ -345,9 +373,14 @@ p {
 
 .art_container {
   position: absolute;
+  /* Use absolute positioning */
   bottom: 0;
   right: 0;
+  /* Align to the right */
+  /* display: flex; */
+  /* justify-conteent: center; */
   align-items: center;
+  margin: 20px;
   /* Example margin */
   animation: blink-animation 1s infinite;
   /* Apply the animation */
@@ -366,18 +399,24 @@ p {
   /* Back to fully visible */
 }
 
-/*.countdown {
+.countdown {
   display: flex;
   justify-content: center;
+  /* Center horizontally */
   align-items: center;
 }
 
 .countdown-text {
   font-size: 4rem;
+  /* Make the text larger */
   text-align: center;
-}*/
+  /* Center text */
+}
 
 .border-cover {
+  /* position: absolute; */
   border: 1px solid #38ac38;
+  /* Change solid to dotted */
+  /* border-radius: 10px; */
   z-index: 1;
 }
