@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="fixed z-10 header">
+    <div className="fixed z-10 header text">
       <div className="flex justify-between items-center">
         <p
           className="relative font-bold text-lg pointer-events-none lg:text-xl glitch"
