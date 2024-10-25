@@ -1,10 +1,11 @@
+import mascot from "@/assets/mascot.jpg";
 import Image from "next/image";
 
 export default function MascotDisplay() {
   return (
     <div>
       <Image
-        src="/images/mascot.jpg"
+        src={mascot}
         alt="Logo"
         width={500}
         height={400}
