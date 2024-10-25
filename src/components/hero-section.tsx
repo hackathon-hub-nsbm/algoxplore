@@ -18,7 +18,7 @@ export default function About() {
           AlgoXplore 1.0, organised by Hackathon Hub NSBM, is an exciting event
           combining an Algothon and a Capture the Flag (CTF) challenge. Taking
           place at NSBM Green University, the event features two competitive
-          rounds designed to test participants' algorithmic problem-solving and
+          rounds designed to test participants algorithmic problem-solving and
           cybersecurity skills. With a focus on innovation and teamwork,
           AlgoXplore 1.0 promises an engaging experience for all coding
           enthusiasts.
