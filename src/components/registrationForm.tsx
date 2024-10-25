@@ -115,7 +115,7 @@ export default function RegistrationForm() {
         action="https://docs.google.com/forms/d/e/1FAIpQLScyu_WYhD3NycnjeIXOBh1YROtu8pX9T6Zp0h7ayHS-DJ91VQ/formResponse"
         onSubmit={handleSubmit}
       >
-        <div className="flex flex-col gap-6 lg:flex-row lg:gap-20">
+        <div className="flex flex-col gap-6 xl:flex-row xl:gap-20">
           <div className="flex flex-col">
             <label htmlFor="teamname">Team Name</label>
             <input
