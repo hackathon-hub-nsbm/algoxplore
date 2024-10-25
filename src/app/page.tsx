@@ -59,7 +59,7 @@ export default function Home() {
         <div className="terminal crt_effect">
           <Navbar />
           <div className="flex flex-col justify-between items-center lg:flex-row lg:items-start terminal_data">
-            <div className="w-full pt-9 lg:fixed lg:pt-0 lg:w-2/4">
+            <div className="hidden w-full pt-5 lg:flex lg:fixed lg:pt-0 lg:w-2/4">
               <div className="flex gap-2 justify-center items-center lg:flex-col lg:items-start">
                 {tabs.map((tab) => (
                   <div
@@ -75,12 +75,41 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:ml-[14rem] xl:ml-[20rem] z-50">
+            <div className="w-full pt-5 lg:hidden lg:pt-0 lg:w-2/4">
+              <div className="lg:hidden">
+                <select
+                  value={activeTab}
+                  onChange={(e) => setActiveTab(e.target.value)}
+                  className="cursor-pointer menu_item bg-[#38ac38] text-black"
+                >
+                  {tabs.map((tab) => (
+                    <option key={tab} value={tab}>
+                      {tab}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="hidden lg:flex gap-2 justify-center items-center lg:flex-col lg:items-start">
+                {tabs.map((tab) => (
+                  <div
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`cursor-pointer menu_item ${
+                      activeTab === tab ? "bg-[#38ac38] text-black" : ""
+                    }`}
+                  >
+                    {tab}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="ml-auto overflow-y-auto z-50 terminal_right">
               {activeTab === "ALGXPLOR" && <About />}
               {activeTab === "TIMELINE" && <TimeLine />}
               {activeTab === "REGISTERATION" && <RegistrationForm />}
-              {activeTab === "SPONSERS" && <Sponsors />}
-              {activeTab === "ABOUT US" && <div>Menu Content 5</div>}
+              {activeTab === "SPONSORS" && <Sponsors />}
+              {activeTab === "ABOUT_US" && <div>About Us</div>}
             </div>
           </div>
         </div>
