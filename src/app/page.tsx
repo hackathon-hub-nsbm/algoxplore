@@ -12,7 +12,6 @@ export default function Home() {
     "ALGXPLR",
     "TIMELINE",
     "REGISTERATION",
-    "SPONSORS",
     "ABOUT_US",
   ];
   const [activeTab, setActiveTab] = useState(tabs[0]);
@@ -75,7 +74,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-full pt-5 lg:hidden lg:pt-0 lg:w-2/4">
+            <div className="w-full py-5 lg:hidden">
               <div className="lg:hidden">
                 <select
                   value={activeTab}
@@ -104,7 +103,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="ml-auto overflow-y-auto z-50 terminal_right">
+            <div className="xl:ml-[22rem] lg:ml-[15rem] overflow-y-auto z-50 terminal_right">
               {activeTab === "ALGXPLR" && <About />}
               {activeTab === "TIMELINE" && <TimeLine />}
               {activeTab === "REGISTERATION" && <RegistrationForm />}

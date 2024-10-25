@@ -345,14 +345,9 @@ p {
 
 .art_container {
   position: absolute;
-  /* Use absolute positioning */
   bottom: 0;
   right: 0;
-  /* Align to the right */
-  /* display: flex; */
-  /* justify-conteent: center; */
   align-items: center;
-  margin: 20px;
   /* Example margin */
   animation: blink-animation 1s infinite;
   /* Apply the animation */
@@ -371,24 +366,18 @@ p {
   /* Back to fully visible */
 }
 
-.countdown {
+/*.countdown {
   display: flex;
   justify-content: center;
-  /* Center horizontally */
   align-items: center;
 }
 
 .countdown-text {
   font-size: 4rem;
-  /* Make the text larger */
   text-align: center;
-  /* Center text */
-}
+}*/
 
 .border-cover {
-  /* position: absolute; */
   border: 1px solid #38ac38;
-  /* Change solid to dotted */
-  /* border-radius: 10px; */
   z-index: 1;
 }
