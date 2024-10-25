@@ -1,4 +1,5 @@
 "use client";
+import AboutUs from "@/components/AboutUs";
 import CustomCursor from "@/components/CustomCursor";
 import About from "@/components/hero-section";
 import Navbar from "@/components/navbar";
@@ -109,7 +110,7 @@ export default function Home() {
               {activeTab === "TIMELINE" && <TimeLine />}
               {activeTab === "REGISTERATION" && <RegistrationForm />}
               {activeTab === "SPONSORS" && <Sponsors />}
-              {activeTab === "ABOUT_US" && <div>About Us</div>}
+              {activeTab === "ABOUT_US" && <AboutUs />}
             </div>
           </div>
         </div>

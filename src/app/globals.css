@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Styles */
 * {
   cursor: none;
 }
@@ -15,16 +16,12 @@ body {
   letter-spacing: -0.6px;
 }
 
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
 *::-webkit-scrollbar {
   display: none;
-  /* Safari and Chrome */
 }
 
-/*.main {
-  min-height: 100vh;
-  max-height: 100vh;
-}*/
-
+/* Terminal Styles */
 .terminal {
   padding: 30px;
   width: 96vw;
@@ -44,17 +41,20 @@ body {
   width: 66%;
 }
 
+/* Menu item cursor and spacing */
 .menu_item {
   padding-left: 6px;
   width: 150px;
   cursor: none;
 }
 
+/* Image Styling */
 .about_image {
   width: 700px;
   height: 400px;
 }
 
+/* Input Field Styling */
 .input {
   width: 190px;
   background-color: transparent;
@@ -82,111 +82,37 @@ body {
   color: gray;
 }
 
-/* Animations */
+/* Glitch Effect */
 @keyframes glitch {
-  0% {
-    clip: rect(42px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  5% {
-    clip: rect(12px, 9999px, 56px, 0);
-    transform: skew(0.3deg);
-  }
-
-  10% {
-    clip: rect(82px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  15% {
-    clip: rect(12px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  20% {
-    clip: rect(42px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  25% {
-    clip: rect(12px, 9999px, 56px, 0);
-    transform: skew(0.3deg);
-  }
-
-  30% {
-    clip: rect(82px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  35% {
-    clip: rect(12px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  40% {
-    clip: rect(42px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  45% {
-    clip: rect(12px, 9999px, 56px, 0);
-    transform: skew(0.3deg);
-  }
-
-  50% {
-    clip: rect(82px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  55% {
-    clip: rect(12px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  60% {
-    clip: rect(42px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  65% {
-    clip: rect(12px, 9999px, 56px, 0);
-    transform: skew(0.3deg);
-  }
-
-  70% {
-    clip: rect(82px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  75% {
-    clip: rect(12px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  80% {
-    clip: rect(42px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  85% {
-    clip: rect(12px, 9999px, 56px, 0);
-    transform: skew(0.3deg);
-  }
-
-  90% {
-    clip: rect(82px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
-  95% {
-    clip: rect(12px, 9999px, 44px, 0);
-    transform: skew(0.3deg);
-  }
-
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
   100% {
     clip: rect(42px, 9999px, 44px, 0);
     transform: skew(0.3deg);
+  }
+  5%,
+  25%,
+  45%,
+  65%,
+  85% {
+    clip: rect(12px, 9999px, 56px, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    clip: rect(82px, 9999px, 44px, 0);
+  }
+  15%,
+  35%,
+  55%,
+  75%,
+  95% {
+    clip: rect(12px, 9999px, 44px, 0);
   }
 }
 
@@ -221,12 +147,12 @@ body {
   animation: glitch 0.3s infinite linear alternate-reverse;
 }
 
+/* Blinking Underscore */
 @keyframes blink {
-  from,
-  to {
+  0%,
+  100% {
     visibility: hidden;
   }
-
   50% {
     visibility: visible;
   }
@@ -236,20 +162,16 @@ body {
   animation: blink 1s step-end infinite;
 }
 
+/* Glow Animation */
 @keyframes glow {
-  0% {
-    text-shadow: 0 0 2px rgba(56, 172, 56, 0.8), 0 0 6px rgba(56, 172, 56, 0.6),
-      0 0 6px rgba(56, 172, 56, 0.4);
-  }
-
-  50% {
-    text-shadow: 0 0 4px rgba(56, 172, 56, 1), 0 0 30px rgba(56, 172, 56, 0.8),
-      0 0 40px rgba(56, 172, 56, 0.6);
-  }
-
+  0%,
   100% {
     text-shadow: 0 0 6px rgba(56, 172, 56, 0.9), 0 0 6px rgba(56, 172, 56, 0.7),
       0 0 6px rgba(56, 172, 56, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 4px rgba(56, 172, 56, 1), 0 0 30px rgba(56, 172, 56, 0.8),
+      0 0 40px rgba(56, 172, 56, 0.6);
   }
 }
 
@@ -257,12 +179,12 @@ body {
   animation: glow 2s infinite;
 }
 
+/* CRT Effect */
 @keyframes flicker {
   0%,
   100% {
     opacity: 1;
   }
-
   50% {
     opacity: 0.6;
   }
@@ -283,17 +205,7 @@ body {
   animation: crtFlicker 0.1s infinite alternate;
 }
 
-@keyframes crtFlicker {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.98;
-    /* Slight flicker */
-  }
-}
-
+/* Flicker Animation */
 .flicker_delay {
   animation: flicker 0.3s infinite;
 }
@@ -316,6 +228,7 @@ p {
   padding-left: 10%;
 }
 
+/* Responsive for small screens */
 @media only screen and (max-width: 768px) {
   .header {
     left: 40px;
@@ -343,52 +256,36 @@ p {
   }
 }
 
+/* Additional styles for countdown and border cover */
 .art_container {
   position: absolute;
-  /* Use absolute positioning */
   bottom: 0;
   right: 0;
-  /* Align to the right */
-  /* display: flex; */
-  /* justify-conteent: center; */
-  align-items: center;
   margin: 20px;
-  /* Example margin */
   animation: blink-animation 1s infinite;
-  /* Apply the animation */
 }
 
-/* Define the blink keyframes */
 @keyframes blink-animation {
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
-
-  /* Back to fully visible */
 }
 
 .countdown {
   display: flex;
   justify-content: center;
-  /* Center horizontally */
   align-items: center;
 }
 
 .countdown-text {
   font-size: 4rem;
-  /* Make the text larger */
   text-align: center;
-  /* Center text */
 }
 
 .border-cover {
-  /* position: absolute; */
   border: 1px solid #38ac38;
-  /* Change solid to dotted */
-  /* border-radius: 10px; */
   z-index: 1;
 }
