@@ -9,7 +9,7 @@ import { useCallback, useEffect, useState } from "react";
 
 export default function Home() {
   const tabs: Array<string> = [
-    "ALGXPLOR",
+    "ALGXPLR",
     "TIMELINE",
     "REGISTERATION",
     "SPONSORS",
@@ -105,7 +105,7 @@ export default function Home() {
             </div>
 
             <div className="ml-auto overflow-y-auto z-50 terminal_right">
-              {activeTab === "ALGXPLOR" && <About />}
+              {activeTab === "ALGXPLR" && <About />}
               {activeTab === "TIMELINE" && <TimeLine />}
               {activeTab === "REGISTERATION" && <RegistrationForm />}
               {activeTab === "SPONSORS" && <Sponsors />}

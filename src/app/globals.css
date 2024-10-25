@@ -349,8 +349,8 @@ p {
   bottom: 0;
   right: 0;
   /* Align to the right */
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-conteent: center; */
   align-items: center;
   margin: 20px;
   /* Example margin */
@@ -387,7 +387,7 @@ p {
 
 .border-cover {
   /* position: absolute; */
-  border: 1px dashed #38ac38;
+  border: 1px solid #38ac38;
   /* Change solid to dotted */
   /* border-radius: 10px; */
   z-index: 1;
