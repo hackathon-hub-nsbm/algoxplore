@@ -1,3 +1,4 @@
+import backimage from "@/assets/backlogo.png";
 import Image from "next/image";
 
 export default function BackDrop() {
@@ -15,12 +16,7 @@ export default function BackDrop() {
         transform: "translate(-50%, -50%)",
       }}
     >
-      <Image
-        src="/images/backlogo.png"
-        alt="Logo"
-        layout="fill"
-        objectFit="cover"
-      />
+      <Image src={backimage} alt="Logo" layout="fill" objectFit="cover" />
     </div>
   );
 }
