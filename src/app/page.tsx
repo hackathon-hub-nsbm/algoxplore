@@ -1,6 +1,7 @@
 "use client";
 import CustomCursor from "@/components/CustomCursor";
 import About from "@/components/hero-section";
+import BackDrop from "@/components/mainlogo";
 import MascotDisplay from "@/components/mascot";
 import Navbar from "@/components/navbar";
 import RegistrationForm from "@/components/registrationForm";
@@ -56,6 +57,7 @@ export default function Home() {
   return (
     <>
       <CustomCursor />
+      <BackDrop />
       <main className="main flex items-center justify-center min-h-screen">
         <div className="terminal crt_effect">
           <Navbar />
