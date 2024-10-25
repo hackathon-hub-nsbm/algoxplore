@@ -11,7 +11,8 @@ export default function Art({ tab }: { tab: string }) {
                                   ░▒▓█▓▒░
 
                                   ░▒▓█▓▒░
-                                -ALGOXPLORE-`}
+                                 ---------
+                                   ABOUT`}
         </pre>
       )}
 
@@ -20,12 +21,13 @@ export default function Art({ tab }: { tab: string }) {
           {`
    ░▒█████▒░
    ░▒█████▒░
-     |░░░|
+    |░░░░░|
       |░|
-     |░░░|
+    |░░░░░|
    ░▒█████▒░
    ░▒█████▒░
-  -CountDown-`}
+   ---------
+   COUNTDOWN`}
         </pre>
       )}
       {tab === "TIMELINE" && (
@@ -38,7 +40,8 @@ export default function Art({ tab }: { tab: string }) {
    ░▒ - --▒░
    ░▒  -- ▒░
    ░▒█████▒░
-  -TimeLine-`}
+   ---------
+   TIME-LINE`}
         </pre>
       )}
       {tab === "SPONSORS" && (
@@ -61,7 +64,8 @@ export default function Art({ tab }: { tab: string }) {
 ⠀⠘⣿⣆⠀⠀⠀⠀⣠⣤⡀⠀⠀⠀⠀⠈⠻⣧⣀⡀⠀⠀⠀⣀⣠⣴⡿⠇⠀
 ⠀⠀⠘⢿⣿⣦⣤⣴⡿⠻⠿⣷⣦⣤⣤⣤⣴⣾⣿⡿⠿⠿⠿⠟⠛⠉⠀⠀⠀
 ⠀⠀⠀⠀⠉⢉⣉⠉⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-          -Sponsors-`}
+          ----------
+           SPONSORS`}
         </pre>
       )}
     </div>
