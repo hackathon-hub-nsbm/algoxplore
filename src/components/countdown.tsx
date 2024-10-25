@@ -41,11 +41,11 @@ export default function Countdown() {
   return (
     <div className="">
       <div className="countdown mt-20">
-        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-semibold text">
+        <h1 className="text-5xl sm:text-7xl xl:text-8xl font-semibold text">
           {timeLeft > 0 ? formatTime(timeLeft) : "00:00:00:00"}
         </h1>
       </div>
-      <div className="text flex flex-row justify-center gap-x-12 text-lg sm:text-2xl sm:gap-x-20 lg:text-3xl lg:gap-x-28 mt-1 lg:mt-2 mb-20">
+      <div className="text flex flex-row justify-center gap-x-12 text-lg sm:text-2xl sm:gap-x-20 xl:text-3xl xl:gap-x-28 mt-1 xl:mt-2 mb-20">
         <span>DAYS</span>
         <span>HRS</span>
         <span>MIN</span>
