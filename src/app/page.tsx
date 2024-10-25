@@ -1,6 +1,7 @@
 "use client";
 import CustomCursor from "@/components/CustomCursor";
 import About from "@/components/hero-section";
+import MascotDisplay from "@/components/mascot";
 import Navbar from "@/components/navbar";
 import RegistrationForm from "@/components/registrationForm";
 import Sponsors from "@/components/sponsors";
@@ -58,7 +59,8 @@ export default function Home() {
       <main className="main flex items-center justify-center min-h-screen">
         <div className="terminal crt_effect">
           <Navbar />
-          <div className="flex flex-col justify-between items-center lg:flex-row lg:items-start terminal_data">
+          <div className="flex flex-col justify-between items-center lg:flex-row lg:items-start terminal_data text">
+            <MascotDisplay />
             <div className="hidden w-full pt-5 lg:flex lg:fixed lg:pt-0 lg:w-2/4">
               <div className="flex gap-2 justify-center items-center lg:flex-col lg:items-start">
                 {tabs.map((tab) => (
@@ -103,7 +105,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
             <div className="ml-auto overflow-y-auto z-50 terminal_right">
               {activeTab === "ALGXPLR" && <About />}
               {activeTab === "TIMELINE" && <TimeLine />}
