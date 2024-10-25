@@ -16,11 +16,9 @@ export default function RegistrationForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Validation rules
   const validateForm = (formData: FormData): FormErrors => {
     const newErrors: FormErrors = {};
 
-    // Team Name validation (2-50 characters, alphanumeric with spaces)
     const teamName = formData.get("entry.663129380") as string;
     if (!teamName || teamName.length < 2 || teamName.length > 50) {
       newErrors.teamName = "Team name must be between 2 and 50 characters";
@@ -29,32 +27,27 @@ export default function RegistrationForm() {
         "Team name can only contain letters, numbers, and spaces";
     }
 
-    // Email validation
     const email = formData.get("entry.1438216699") as string;
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       newErrors.email = "Please enter a valid email address";
     }
 
-    // Contact number validation (Sri Lankan format)
     const contact = formData.get("entry.278976986") as string;
     if (!contact || !/^07[0-9]{8}$/.test(contact.replace(/[-\s]/g, ""))) {
       newErrors.contact = "Please enter a valid mobile number (07X-XXXX-XXX)";
     }
 
-    // University validation (required, 2-50 characters)
     const university = formData.get("entry.88928883") as string;
     if (!university || university.length < 2 || university.length > 50) {
       newErrors.university =
         "University name must be between 2 and 50 characters";
     }
 
-    // Food preference validation
     const foodPreference = formData.get("entry.1489052153") as string;
     if (!foodPreference) {
       newErrors.foodPreference = "Please select your food preference";
     }
 
-    // Team members validation (2-4 members, proper names)
     const member1 = formData.get("entry.808958187") as string;
     const member2 = formData.get("entry.1178906780") as string;
     const member3 = formData.get("entry.26362077") as string;
@@ -225,7 +218,7 @@ export default function RegistrationForm() {
           <ErrorMessage error={errors.member4} />
         </div>
         <button
-          className="btn mt-9 border p-2 text-sm border-[#38ac38] hover:bg-[#38ac38] hover:text-black disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn text mt-9 border p-2 text-sm border-[#38ac38] hover:bg-[#38ac38] hover:text-black disabled:opacity-50 disabled:cursor-not-allowed"
           type="submit"
           disabled={isSubmitting}
         >
