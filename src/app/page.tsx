@@ -16,6 +16,7 @@ export default function Home() {
     "REGISTRATION",
     "ABOUT_US",
   ];
+
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   const handleKeyDown = useCallback(
