@@ -6,7 +6,7 @@ export default function About() {
     <div>
       <div className="container mx-auto border-cover">
         <Countdown />
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center text">
           <Link
             href="#"
             className="text-center py-[5px] px-[30px] sm:text-xl lg:text-2xl tracking-widest bg-[#38ac38] text-black"
@@ -14,7 +14,7 @@ export default function About() {
             REGISTER NOW
           </Link>
         </div>
-        <p className="text text-lg mx-10 text-justify mt-20 ">
+        <p className="text text-lg mx-10 text-justify mt-20 p-5">
           AlgoXplore 1.0 is event organized by the []. The event is aimed at
           providing a platform for students to explore the world of algorithms
           and data structures. The event will consist of a series of lectures
@@ -25,7 +25,7 @@ export default function About() {
         </p>
       </div>
       <div className="mt-10 pt-10">
-        <Art tab="ALGXPLR" />
+        <Art tab="COUNTDOWN" />
       </div>
     </div>
   );
