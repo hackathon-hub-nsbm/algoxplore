@@ -16,15 +16,32 @@ const CustomCursor: React.FC = () => {
   }, []);
 
   return (
-    <div
-      className="fixed pointer-events-none z-50 w-3 h-5"
-      style={{
-        backgroundColor: "#00e500",
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        transform: "translate(-50%, -50%)",
-      }}
-    />
+    <>
+      <div
+        className="fixed pointer-events-none z-50"
+        style={{
+          width: "10px",
+          height: "20px",
+          backgroundColor: "#38ac38",
+          boxShadow: "0 0 5px #38ac38, 0 0 10px #38ac38",
+          position: "fixed",
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+          transform: "translate(-50%, -50%)",
+          mixBlendMode: "screen",
+        }}
+      />
+      <div
+        className="fixed inset-0 pointer-events-none z-40"
+        style={{
+          backgroundColor: "rgba(0, 0, 0, 0.05)",
+          backgroundImage:
+            "linear-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px)",
+          backgroundSize: "100% 4px",
+          mixBlendMode: "multiply",
+        }}
+      />
+    </>
   );
 };
 
