@@ -1,5 +1,6 @@
 "use client";
-import CustomCursor from "@/components/CustomCursor";
+import Art from "@/components/art";
+// import CustomCursor from "@/components/CustomCursor";
 import About from "@/components/hero-section";
 import BackDrop from "@/components/mainlogo";
 import MascotDisplay from "@/components/mascot";
@@ -57,13 +58,13 @@ export default function Home() {
 
   return (
     <>
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <BackDrop />
       <main className="main flex items-center justify-center min-h-screen">
+        <MascotDisplay />
         <div className="overflow-x-hidden overflow-y-scroll terminal crt_effec">
           <Navbar />
           <div className="flex flex-col justify-between items-center lg:flex-row lg:items-start terminal_data text">
-            <MascotDisplay />
             <div className="hidden w-full pt-5 lg:flex lg:fixed lg:pt-0 lg:w-2/4">
               <div className="flex gap-2 justify-center items-center lg:flex-col lg:items-start">
                 {tabs.map((tab) => (
@@ -77,6 +78,7 @@ export default function Home() {
                     {tab}
                   </div>
                 ))}
+                <Art tab={activeTab} />
               </div>
             </div>
 

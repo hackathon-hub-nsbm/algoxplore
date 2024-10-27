@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Art from "./art";
 export default function Sponsors() {
   return (
     <div className="lg:pr-20">
@@ -34,7 +33,6 @@ export default function Sponsors() {
           </div>
         </div>
       </div>
-      <Art tab="SPONSORS" />
     </div>
   );
 }
