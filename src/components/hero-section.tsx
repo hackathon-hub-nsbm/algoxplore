@@ -33,7 +33,7 @@ export default function About({
           <BrandTicker />
         </div>
       </div>
-      {/* <Art tab="COUNTDOWN" /> */}
+      <Art tab="COUNTDOWN" />
     </div>
   );
 }
