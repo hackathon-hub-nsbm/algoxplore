@@ -31,7 +31,7 @@ const BrandTicker = () => {
   }, [sponsors.length]);
 
   return (
-    <div className="lg:w-3/4 mx-auto p-4 mb-8 relative overflow-hidden">
+    <div className="lg:w-2/4 mx-auto p-4 mb-8 relative overflow-hidden">
       <div className="font-mono text-[#38ac38] mb-2 text-sm flex justify-between">
         <span>{"<SPONSORS>"}</span>
         <span className="opacity-50">{`${position + 1}/${sponsors.length}`}</span>
@@ -60,8 +60,8 @@ const BrandTicker = () => {
           >
             <div className="hidden lg:flex items-center justify-center p-4">
               <Image
-                width={240}
-                height={240}
+                width={190}
+                height={190}
                 src={sponsor.imageUrl}
                 alt={sponsor.name}
                 className="filter brightness-150 contrast-125"
