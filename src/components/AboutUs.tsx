@@ -61,6 +61,38 @@ export default function AboutUs() {
             impactful solutions that address real-world challenges.
           </p>
         </div>
+
+        <div className="mission w-full md:w-1/2">
+          <h2 className="text-xl font-semibold mb-3 text-lime-500 digital-font">
+            HAVE QUESTIONS?
+          </h2>
+
+          <p className="text-base leading-relaxed digital-font">
+            Contact us by mail :{" "}
+            <a
+              href="mailto:hackathonhubnsbm@gmail.com"
+              className="text-blue-500 hover:underline"
+            >
+              hackathonhubnsbm@gmail.com
+            </a>{" "}
+            <br />
+            Event Coordinator :{" "}
+            <a
+              href="tel:+94772111426"
+              className="text-blue-500 hover:underline"
+            >
+              +94 77 211 1426 (Mandinu)
+            </a>{" "}
+            <br />
+            Marketing :{" "}
+            <a
+              href="tel:+94762611651"
+              className="text-blue-500 hover:underline"
+            >
+              +94 76 261 1651 (Ranudi)
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   );
