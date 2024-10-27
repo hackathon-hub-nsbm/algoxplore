@@ -59,7 +59,7 @@ export default function Home() {
       <CustomCursor />
       <BackDrop />
       <main className="main flex items-center justify-center min-h-screen">
-        <div className="terminal crt_effect">
+        <div className="overflow-x-hidden overflow-y-scroll terminal crt_effec">
           <Navbar />
           <div className="flex flex-col justify-between items-center lg:flex-row lg:items-start terminal_data text">
             <MascotDisplay />
@@ -79,7 +79,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-full py-5 lg:hidden">
+            <div className="w-full pt-10 lg:hidden">
               <div className="lg:hidden">
                 <select
                   value={activeTab}

@@ -7,8 +7,8 @@ export default function MascotDisplay() {
       <Image
         src={mascot}
         alt="Logo"
-        width={500}
-        height={400}
+        width={300}
+        height={300}
         style={{
           position: "absolute",
           margin: "5px",

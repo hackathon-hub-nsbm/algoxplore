@@ -20,10 +20,9 @@ body {
   /* Safari and Chrome */
 }
 
-/*.main {
+.main {
   min-height: 100vh;
-  max-height: 100vh;
-}*/
+}
 
 .terminal {
   padding: 30px;
