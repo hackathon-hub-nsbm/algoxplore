@@ -7,7 +7,9 @@ export default (phase) => {
    * @type {import('next').NextConfig}
    */
   const nextConfig = {
-    assetPrefix: isDev ? undefined : "https://cdn.mydomain.com",
+    assetPrefix: isDev
+      ? undefined
+      : "https://hackathon-hub-nsbm.github.io/algoxplore",
   };
   return nextConfig;
 };
