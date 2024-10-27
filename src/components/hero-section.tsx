@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Art from "./art";
+import BrandTicker from "./brandTicker";
 import Countdown from "./countdown";
+
 export default function About({
   setActiveTab,
 }: { setActiveTab: (tab: string) => void }) {
@@ -17,7 +19,7 @@ export default function About({
             REGISTER NOW
           </Link>
         </div>
-        <p className="text mx-10 text-center p-5 pb-0 mt-10 mb-5 lg:text-justify lg:mt-10">
+        <p className="text mx-10 text-center p-6 pb-0 mt-10 mb-5 lg:text-justify lg:mt-10">
           AlgoXplore 1.0, organized by Hackathon Hub NSBM, is an exciting event
           that combines an Algothon and a Capture the Flag (CTF) challenge.
           Taking place at NSBM Green University, the event features two
@@ -27,8 +29,11 @@ export default function About({
           coding enthusiasts.
           <span className="blinking_underscore"> _</span>
         </p>
+        <div className="p-6 pb-0">
+          <BrandTicker />
+        </div>
       </div>
-      <Art tab="COUNTDOWN" />
+      {/* <Art tab="COUNTDOWN" /> */}
     </div>
   );
 }
