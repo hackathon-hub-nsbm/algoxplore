@@ -11,17 +11,17 @@ export default function Navbar() {
           AlgoXplore 1.0
         </p>
         <div className="flex flex-col text-sm lg:flex-row lg:gap-3">
-          <Link href="/">
+          <Link href="https://www.linkedin.com/in/hackathonhub">
             <p className="hover:after:content-['↗'] hover:after:ml-1 pointer-events-auto">
               LinkedIn
             </p>
           </Link>
-          <Link href="/">
+          <Link href="https://https://www.instagram.com/hackathonhub.nsbm/">
             <p className="hover:after:content-['↗'] hover:after:ml-1">
               Instagram
             </p>
           </Link>
-          <Link href="/">
+          <Link href="https://https://web.facebook.com/people/Hackathon-Hub/61556983036529/">
             <p className="hover:after:content-['↗'] hover:after:ml-1">
               Facebook
             </p>
