@@ -1,5 +1,6 @@
 "use client";
-import CustomCursor from "@/components/CustomCursor"; // Ensure this is imported
+import AboutUs from "@/components/AboutUs";
+import CustomCursor from "@/components/CustomCursor";
 import Art from "@/components/art";
 import About from "@/components/hero-section";
 import BackDrop from "@/components/mainlogo";
@@ -115,7 +116,7 @@ export default function Home() {
               {activeTab === "TIMELINE" && <TimeLine />}
               {activeTab === "REGISTRATION" && <RegistrationForm />}
               {activeTab === "SPONSORS" && <Sponsors />}
-              {activeTab === "ABOUT_US" && <div>About Us</div>}
+              {activeTab === "ABOUT_US" && <AboutUs />}
             </div>
           </div>
         </div>
