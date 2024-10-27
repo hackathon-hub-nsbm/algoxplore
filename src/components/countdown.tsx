@@ -39,13 +39,13 @@ export default function Countdown() {
   };
 
   return (
-    <div className="">
+    <div>
       <div className="countdown mt-20">
         <h1 className="text-5xl sm:text-7xl xl:text-8xl font-semibold text">
           {timeLeft > 0 ? formatTime(timeLeft) : "00:00:00:00"}
         </h1>
       </div>
-      <div className="text flex flex-row justify-center gap-x-12 text-lg sm:text-2xl sm:gap-x-20 xl:text-3xl xl:gap-x-28 mt-1 xl:mt-2 mb-20">
+      <div className="text flex flex-row justify-center mb-16 gap-x-12 text-lg sm:text-2xl sm:gap-x-20 xl:text-3xl xl:gap-x-28 mt-1 xl:mt-2 lg:mb-20">
         <span>DAYS</span>
         <span>HRS</span>
         <span>MIN</span>
