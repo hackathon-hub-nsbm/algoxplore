@@ -109,7 +109,7 @@ export default function Home() {
               </div>
             </div>
             <div className="ml-auto overflow-y-auto z-50 terminal_right">
-              {activeTab === "ALGXPLR" && <About />}
+              {activeTab === "ALGXPLR" && <About setActiveTab={setActiveTab} />}
               {activeTab === "TIMELINE" && <TimeLine />}
               {activeTab === "REGISTRATION" && <RegistrationForm />}
               {activeTab === "SPONSORS" && <Sponsors />}

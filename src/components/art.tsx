@@ -31,7 +31,7 @@ export default function Art({ tab }: { tab: string }) {
         </pre>
       )}
       {tab === "TIMELINE" && (
-        <pre className="text art_container scale-[40%] absolute right-0 top-[-30%] lg:scale-[100%] lg:right-2 lg:bottom-0 lg:top-[75%] xl:top-[70%] xl:right-4 ">
+        <pre className="text art_container scale-[40%] absolute right-0 top-[-30%] lg:scale-[100%] lg:right-2 lg:bottom-0 lg:top-[75%] xl:top-[60%] xl:right-4 ">
           {`
    ░▒█████▒░
    ░▒   - ▒░

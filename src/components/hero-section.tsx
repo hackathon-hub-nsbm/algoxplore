@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Art from "./art";
 import Countdown from "./countdown";
-export default function About() {
+export default function About({
+  setActiveTab,
+}: { setActiveTab: (tab: string) => void }) {
   return (
     <div>
       <div className="border-cover">
@@ -9,6 +11,7 @@ export default function About() {
         <div className="flex flex-col items-center text">
           <Link
             href="#"
+            onClick={() => setActiveTab("REGISTRATION")}
             className="text-center py-[5px] px-[30px] sm:text-xl lg:text-2xl tracking-widest bg-[#38ac38] text-black"
           >
             REGISTER NOW

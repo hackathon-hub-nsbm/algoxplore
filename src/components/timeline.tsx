@@ -20,8 +20,8 @@ export default function Timeline() {
   ];
 
   return (
-    <div className="border-cover underscan text-green-500">
-      <div className="max-w-4xl mx-auto relative">
+    <div className="border-cover underscan m-4 ml-10 mr-10">
+      <div className="lg:max-w-4xl mx-auto relative">
         <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-green-500 hidden md:block" />
 
         <div className="relative">
