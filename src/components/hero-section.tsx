@@ -4,7 +4,7 @@ import Countdown from "./countdown";
 export default function About() {
   return (
     <div>
-      <div className="container mx-auto border-cover">
+      <div className="border-cover">
         <Countdown />
         <div className="flex flex-col items-center text">
           <Link
@@ -14,7 +14,7 @@ export default function About() {
             REGISTER NOW
           </Link>
         </div>
-        <p className="text text-m mx-10 text-justify mt-20 p-5">
+        <p className="text mx-10 text-center p-5 pb-0 mt-10 mb-5 lg:text-justify lg:mt-10">
           AlgoXplore 1.0, organized by Hackathon Hub NSBM, is an exciting event
           that combines an Algothon and a Capture the Flag (CTF) challenge.
           Taking place at NSBM Green University, the event features two
@@ -25,9 +25,7 @@ export default function About() {
           <span className="blinking_underscore"> _</span>
         </p>
       </div>
-      <div className="mt-10 pt-10">
-        <Art tab="COUNTDOWN" />
-      </div>
+      <Art tab="COUNTDOWN" />
     </div>
   );
 }

@@ -15,6 +15,7 @@ export default function Home() {
     "TIMELINE",
     "REGISTRATION",
     "ABOUT_US",
+    "SPONSORS",
   ];
 
   const [activeTab, setActiveTab] = useState(tabs[0]);
