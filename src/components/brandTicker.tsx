@@ -1,3 +1,6 @@
+import aruna from "@/assets/logo_aruna.jpg";
+import pubudu from "@/assets/logo_pubudu_constructions.png";
+import sundayMorning from "@/assets/logo_sunday_morning.png";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -8,17 +11,17 @@ const BrandTicker = () => {
     {
       id: 1,
       name: "The Sunday Morning",
-      imageUrl: "/logo_sunday_morning.png",
+      imageUrl: sundayMorning,
     },
     {
       id: 2,
       name: "Aruna",
-      imageUrl: "/logo_aruna.jpg",
+      imageUrl: aruna,
     },
     {
       id: 3,
       name: "Pubudu Cnstructions",
-      imageUrl: "/logo_pubudu_constructions.png",
+      imageUrl: pubudu,
     },
   ];
 

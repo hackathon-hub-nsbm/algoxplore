@@ -1,3 +1,6 @@
+import aruna from "@/assets/logo_aruna.jpg";
+import pubudu from "@/assets/logo_pubudu_constructions.png";
+import sundayMorning from "@/assets/logo_sunday_morning.png";
 import Image from "next/image";
 export default function Sponsors() {
   return (
@@ -7,7 +10,7 @@ export default function Sponsors() {
           <p className="text text-center">Bronze Sponsor</p>
           <Image
             className="mt-6"
-            src="/logo_pubudu_constructions.png"
+            src={pubudu}
             alt="Pubudu Constructions"
             width={300}
             height={300}
@@ -18,14 +21,14 @@ export default function Sponsors() {
           <div className="flex gap-10">
             <Image
               className="mt-6"
-              src="/logo_sunday_morning.png"
+              src={sundayMorning}
               alt="The Sunday Morning"
               width={190}
               height={190}
             />
             <Image
               className="mt-6"
-              src="/logo_aruna.jpg"
+              src={aruna}
               alt="Aruna"
               width={190}
               height={190}
