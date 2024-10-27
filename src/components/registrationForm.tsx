@@ -108,7 +108,7 @@ export default function RegistrationForm() {
     error ? <span className="text-red-500 text-xs mt-1">{error}</span> : null;
 
   return (
-    <div className="border-cover underscan">
+    <div className="border-cover p-10">
       <p className="text">Register for the AlgoXplore 1.0</p>
       <form
         className="pt-9"

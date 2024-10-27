@@ -31,13 +31,13 @@ const BrandTicker = () => {
   }, [sponsors.length]);
 
   return (
-    <div className="lg:w-2/4 mx-auto p-4 mb-8 relative overflow-hidden">
+    <div className="lg:w-2/4 mx-auto p-2 mb-8 relative overflow-hidden">
       <div className="font-mono text-[#38ac38] mb-2 text-sm flex justify-between">
         <span>{"<SPONSORS>"}</span>
         <span className="opacity-50">{`${position + 1}/${sponsors.length}`}</span>
       </div>
 
-      <div className="relative h-32 flex items-center justify-center">
+      <div className="relative h-20 flex items-center justify-center">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-[#38ac38] opacity-5 animate-pulse" />
           <div className="absolute top-0 left-0 w-16 h-16 border-t border-l border-[#38ac38] opacity-50" />

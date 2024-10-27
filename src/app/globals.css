@@ -11,6 +11,7 @@ body {
   color: #38ac38;
   font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
+  font-size: 0.9rem;
   font-optical-sizing: auto;
   letter-spacing: -0.6px;
 }
@@ -25,10 +26,13 @@ body {
 }
 
 .terminal {
-  padding: 30px;
-  height: 48vw;
-  width: 96vw;
+  position: absolute;
+  padding: 1%;
+  height: calc(100vh - 10%);
+  width: calc(100vw - 5%);
+  max-width: 100%;
   border: 1px #38ac38 dashed;
+  box-sizing: border-box;
 }
 
 .header {
@@ -316,37 +320,55 @@ p {
   padding-left: 10%;
 }
 
+@media (max-width: 1366px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .art_container {
+    /* visibility: hidden;
+     */
+    padding-left: 10%;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .mascotDisplay {
     visibility: hidden;
   }
 
+  .glitch {
+    display: none;
+  }
+
+  .glow {
+    display: none;
+  }
+
+  .crt_effect {
+    display: none;
+  }
+
   .terminal {
-    padding: 30px;
+    padding: 1%;
+    font-size: 0.8rem;
     height: auto;
     width: auto;
     border: 1px #38ac38 dashed;
   }
 
+  .border-cover {
+    padding: 0%;
+  }
+
   .art_container {
     position: absolute;
     visibility: hidden;
-    /* Use absolute positioning */
     bottom: 0;
     right: 0;
-    /* Align to the right */
-    /* display: flex; */
-    /* justify-conteent: center; */
     align-items: center;
     margin: 20px;
-    /* Example margin */
     animation: blink-animation 1s infinite;
-    /* Apply the animation */
-  }
-
-  .header {
-    left: 40px;
-    right: 40px;
   }
 
   .menu_item {
@@ -360,7 +382,7 @@ p {
 
   .terminal_right {
     width: 100%;
-    padding-top: 36px;
+    padding-top: 1%;
   }
 
   .input,
@@ -373,13 +395,16 @@ p {
 .art_container {
   position: absolute;
   /* Use absolute positioning */
-  bottom: 0;
-  right: 0;
+  top: 0;
+  left: 0;
+  font-size: 0.8rem;
   /* Align to the right */
   /* display: flex; */
   /* justify-conteent: center; */
   align-items: center;
-  margin: 20px;
+  /* margin: 20px; */
+  margin-left: 15%;
+  /* margin-top: 3%; */
   /* Example margin */
   animation: blink-animation 1s infinite;
   /* Apply the animation */

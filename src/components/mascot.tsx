@@ -11,7 +11,7 @@ export default function MascotDisplay() {
         height={300}
         style={{
           position: "absolute",
-          margin: "5px",
+          margin: "2%",
           bottom: "0",
           left: "0",
           animation: "glow2 2.3s infinite alternate",
