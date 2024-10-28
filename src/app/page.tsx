@@ -1,7 +1,7 @@
 "use client";
 
 import AboutUs from "@/components/AboutUs";
-import CustomCursor from "@/components/CustomCursor"; // Ensure this is imported
+import FAQ from "@/components/FAQ";
 import Art from "@/components/art";
 import About from "@/components/hero-section";
 import BackDrop from "@/components/mainlogo";
@@ -60,7 +60,6 @@ export default function Home() {
 
   return (
     <>
-      <CustomCursor /> {/* Render CustomCursor here */}
       <BackDrop />
       <main className="main flex items-center justify-center min-h-screen">
         <MascotDisplay />
