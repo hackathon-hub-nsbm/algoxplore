@@ -53,7 +53,7 @@ export default function RegistrationForm() {
     const member3 = formData.get("entry.26362077") as string;
     const member4 = formData.get("entry.1779595281") as string;
 
-    const nameRegex = /^[a-zA-Z\s]{2,50}$/;
+    const nameRegex = /^[a-zA-Z\s.]{2,50}$/;
 
     if (!member1 || !nameRegex.test(member1)) {
       newErrors.member1 = "Please enter a valid name for member 1";
