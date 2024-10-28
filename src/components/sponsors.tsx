@@ -21,7 +21,7 @@ export default function Sponsors() {
             />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text text-center">Sponsored by</p>
+            <p className="text text-center">Official Gift Partner</p>
             <Image
               className="mt-6"
               src={logoGreenBlack}
@@ -31,7 +31,7 @@ export default function Sponsors() {
             />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text text-center">Sponsored by</p>
+            <p className="text text-center">Official Digital Media Partner</p>
             <Image
               className="mt-6"
               src={logoHack}
@@ -42,7 +42,7 @@ export default function Sponsors() {
           </div>
         </div>
         <div>
-          <p className="text text-center">Media Sponsor</p>
+          <p className="text text-center">Official Media Partner</p>
           <div className="flex gap-10 justify-center">
             <Image
               className="mt-6"
