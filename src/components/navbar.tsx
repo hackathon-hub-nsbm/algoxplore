@@ -5,7 +5,7 @@ export default function Navbar() {
     <div className="fixed z-10 header text">
       <div className="flex justify-between items-center">
         <p
-          className="relative font-bold text-lg pointer-events-non lg:text-xl glitch"
+          className="relative font-bold text-lg pointer-events-none lg:text-xl glitch"
           data-text="AlgoXplore 1.0"
         >
           AlgoXplore 1.0

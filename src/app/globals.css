@@ -332,10 +332,6 @@ p {
     visibility: hidden;
   }
 
-  .glitch {
-    display: none;
-  }
-
   .glow {
     display: none;
   }
@@ -344,16 +340,25 @@ p {
     display: none;
   }
 
+  .header {
+    left: 19px;
+    right: 19px;
+    top: 19px;
+  }
+
   .terminal {
-    padding: 1%;
     font-size: 0.8rem;
-    height: auto;
-    width: auto;
+    width: 100vw;
+    height: 100vh;
     border: 1px #38ac38 dashed;
   }
 
-  .border-cover {
-    padding: 0%;
+  .terminal_right {
+    padding: 6% !important;
+  }
+
+  .mobilenavbar {
+    padding-left: 6% !important;
   }
 
   .art_container {
