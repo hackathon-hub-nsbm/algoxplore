@@ -8,7 +8,7 @@ export default function AboutUs() {
       </div>
 
       <div className="intro text-center">
-        <p className="text-lg leading-relaxed text-center digital-font">
+        <p className="text-base leading-relaxed text-center digital-font">
           The Hackathon Hub is a platform dedicated to fostering innovation and
           technical excellence in university students. Its mission is to empower
           future problem solvers through hands-on training, mentorship, and
