@@ -1,7 +1,7 @@
 "use client";
 
 import AboutUs from "@/components/AboutUs";
-// import FAQ from "@/components/FAQ";
+import FAQ from "@/components/FAQ";
 import Art from "@/components/art";
 import About from "@/components/hero-section";
 import BackDrop from "@/components/mainlogo";
@@ -19,6 +19,7 @@ export default function Home() {
     "REGISTRATION",
     "ABOUT_US",
     "SPONSORS",
+    "FAQ",
   ];
 
   const [activeTab, setActiveTab] = useState(tabs[0]);
@@ -106,6 +107,7 @@ export default function Home() {
               {activeTab === "REGISTRATION" && <RegistrationForm />}
               {activeTab === "SPONSORS" && <Sponsors />}
               {activeTab === "ABOUT_US" && <AboutUs />}
+              {activeTab === "FAQ" && <FAQ />}
             </div>
           </div>
         </div>
