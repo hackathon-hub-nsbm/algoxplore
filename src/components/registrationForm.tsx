@@ -24,7 +24,7 @@ export default function RegistrationForm() {
       newErrors.teamName = "Team name must be between 2 and 50 characters";
     } else if (!/^[a-zA-Z0-9\s]+$/.test(teamName)) {
       newErrors.teamName =
-        "Team name can only contain letters, numbers, and spaces";
+        "Team name can only contain letters, numbers, and spaces Eg: Group X1";
     }
 
     const email = formData.get("entry.1438216699") as string;
@@ -34,13 +34,13 @@ export default function RegistrationForm() {
 
     const contact = formData.get("entry.278976986") as string;
     if (!contact || !/^07[0-9]{8}$/.test(contact.replace(/[-\s]/g, ""))) {
-      newErrors.contact = "Please enter a valid mobile number (07X-XXXX-XXX)";
+      newErrors.contact = "Please enter a valid mobile number Eg: 07X-XXXX-XXX";
     }
 
     const university = formData.get("entry.88928883") as string;
     if (!university || university.length < 2 || university.length > 50) {
       newErrors.university =
-        "University name must be between 2 and 50 characters";
+        "University name must be between 2 and 50 characters (NSBM)";
     }
 
     const foodPreference = formData.get("entry.1489052153") as string;
@@ -56,16 +56,20 @@ export default function RegistrationForm() {
     const nameRegex = /^[a-zA-Z\s]{2,50}$/;
 
     if (!member1 || !nameRegex.test(member1)) {
-      newErrors.member1 = "Please enter a valid name for member 1";
+      newErrors.member1 =
+        "Name can only contain letters and spaces. Eg: Pawan Wijesinghe";
     }
     if (!member2 || !nameRegex.test(member2)) {
-      newErrors.member2 = "Please enter a valid name for member 2";
+      newErrors.member2 =
+        "Name can only contain letters and spaces. Eg: Pawan Wijesinghe";
     }
     if (member3 && !nameRegex.test(member3)) {
-      newErrors.member3 = "Please enter a valid name for member 3";
+      newErrors.member3 =
+        "Name can only contain letters and spaces. Eg: Pawan Wijesinghe";
     }
     if (member4 && !nameRegex.test(member4)) {
-      newErrors.member4 = "Please enter a valid name for member 4";
+      newErrors.member4 =
+        "Name can only contain letters and spaces. Eg: Pawan Wijesinghe";
     }
 
     return newErrors;

@@ -1,7 +1,7 @@
 "use client";
 
 import AboutUs from "@/components/AboutUs";
-import CustomCursor from "@/components/CustomCursor"; // Ensure this is imported
+import FAQ from "@/components/FAQ";
 import Art from "@/components/art";
 import About from "@/components/hero-section";
 import BackDrop from "@/components/mainlogo";
@@ -19,6 +19,7 @@ export default function Home() {
     "REGISTRATION",
     "ABOUT_US",
     "SPONSORS",
+    "FAQ",
   ];
 
   const [activeTab, setActiveTab] = useState(tabs[0]);
@@ -60,12 +61,12 @@ export default function Home() {
 
   return (
     <>
-      <CustomCursor /> {/* Render CustomCursor here */}
       <BackDrop />
       <main className="main flex items-center justify-center min-h-screen">
         <MascotDisplay />
-        <div className="overflow-x-hidden overflow-y-scroll terminal crt_effec">
+        <div className="overflow-x-hidden overflow-y-scroll terminal crt_effect">
           <Navbar />
+
           <div className="flex flex-col justify-between items-center lg:flex-row lg:items-start terminal_data text">
             <div className="hidden w-full pt-5 lg:flex lg:fixed lg:pt-0 lg:w-2/4">
               <div className="flex gap-2 justify-center items-center lg:flex-col lg:items-start">
@@ -84,7 +85,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-full pt-10 lg:hidden">
+            <div className="w-full pt-10 lg:hidden mobilenavbar">
               <div className="lg:hidden">
                 <select
                   value={activeTab}
@@ -98,26 +99,15 @@ export default function Home() {
                   ))}
                 </select>
               </div>
-              <div className="hidden lg:flex gap-2 justify-center items-center lg:flex-col lg:items-start">
-                {tabs.map((tab) => (
-                  <div
-                    key={tab}
-                    onClick={() => setActiveTab(tab)}
-                    className={`cursor-pointer menu_item ${
-                      activeTab === tab ? "bg-[#38ac38] text-black" : ""
-                    }`}
-                  >
-                    {tab}
-                  </div>
-                ))}
-              </div>
             </div>
+
             <div className="ml-auto overflow-y-auto z-50 terminal_right">
               {activeTab === "ALGXPLR" && <About setActiveTab={setActiveTab} />}
               {activeTab === "TIMELINE" && <TimeLine />}
               {activeTab === "REGISTRATION" && <RegistrationForm />}
               {activeTab === "SPONSORS" && <Sponsors />}
               {activeTab === "ABOUT_US" && <AboutUs />}
+              {activeTab === "FAQ" && <FAQ />}
             </div>
           </div>
         </div>
