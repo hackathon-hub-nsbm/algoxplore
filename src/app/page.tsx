@@ -1,7 +1,7 @@
 "use client";
 
 import AboutUs from "@/components/AboutUs";
-import FAQ from "@/components/FAQ";
+// import FAQ from "@/components/FAQ";
 import Art from "@/components/art";
 import About from "@/components/hero-section";
 import BackDrop from "@/components/mainlogo";
