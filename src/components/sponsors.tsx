@@ -22,6 +22,7 @@ export default function Sponsors() {
               height={300}
             />
           </div>
+
           <div className="flex flex-col items-center">
             <p className="text text-center">Official Gift Partner</p>
             <Image
@@ -32,6 +33,7 @@ export default function Sponsors() {
               height={300}
             />
           </div>
+
           <div className="flex flex-col items-center">
             <p className="text text-center">Official Digital Media Partner</p>
             <Image
@@ -42,16 +44,7 @@ export default function Sponsors() {
               height={200}
             />
           </div>
-          <div className="flex flex-col items-center">
-            <p className="text text-center">Print and Online Media Partner</p>
-            <Image
-              className="mt-6"
-              src={virakesariLogo}
-              alt="Virakesari"
-              width={300}
-              height={300}
-            />
-          </div>
+
           <div className="flex flex-col items-center">
             <p className="text text-center">Official Bronze Partner</p>
             <Image
@@ -63,8 +56,9 @@ export default function Sponsors() {
             />
           </div>
         </div>
+
         <div>
-          <p className="text text-center">Official Media Partner</p>
+          <p className="text text-center">Printed Media Partner(s)</p>
           <div className="flex gap-10 justify-center">
             <Image
               className="mt-6"
@@ -73,12 +67,21 @@ export default function Sponsors() {
               width={190}
               height={190}
             />
+
             <Image
               className="mt-6"
               src={logoSunday2}
               alt="Aruna"
               width={190}
               height={190}
+            />
+
+            <Image
+              className="mt-6"
+              src={virakesariLogo}
+              alt="Virakesari"
+              width={300}
+              height={300}
             />
           </div>
         </div>
