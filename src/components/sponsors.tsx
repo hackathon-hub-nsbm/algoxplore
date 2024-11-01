@@ -1,3 +1,4 @@
+import apiFloraLogo from "@/assets/api-flora.png";
 import logoBrandView from "@/assets/brandViewLogo.jpg";
 import logoGreenBlack from "@/assets/green-black.png";
 import logoHack from "@/assets/hacksl.jpg";
@@ -24,6 +25,17 @@ export default function Sponsors() {
           </div>
 
           <div className="flex flex-col items-center">
+            <p className="text text-center">Official Bronze Partner</p>
+            <Image
+              className="mt-6"
+              src={logoBrandView}
+              alt="Code Filine"
+              width={200}
+              height={200}
+            />
+          </div>
+
+          <div className="flex flex-col items-center">
             <p className="text text-center">Official Gift Partner</p>
             <Image
               className="mt-6"
@@ -35,22 +47,22 @@ export default function Sponsors() {
           </div>
 
           <div className="flex flex-col items-center">
-            <p className="text text-center">Official Digital Media Partner</p>
+            <p className="text text-center">Official Gift Partner</p>
             <Image
               className="mt-6"
-              src={logoHack}
-              alt="Hack SL"
+              src={apiFloraLogo}
+              alt="Api Flora"
               width={200}
               height={200}
             />
           </div>
 
           <div className="flex flex-col items-center">
-            <p className="text text-center">Official Bronze Partner</p>
+            <p className="text text-center">Official Digital Media Partner</p>
             <Image
               className="mt-6"
-              src={logoBrandView}
-              alt="Code Filine"
+              src={logoHack}
+              alt="Hack SL"
               width={200}
               height={200}
             />
