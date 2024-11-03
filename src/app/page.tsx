@@ -118,7 +118,7 @@ export default function Home() {
               {activeTab === "REGISTRATION" && <RegistrationForm />}
               {activeTab === "SPONSORS" && <Sponsors />}
               {activeTab === "ABOUT_US" && <AboutUs />}
-              {activeTab === "FAQ" && <FAQ />}
+              {activeTab === "FAQs" && <FAQ />}
             </div>
           </div>
         </div>

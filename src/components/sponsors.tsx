@@ -1,13 +1,13 @@
-import logoBrandView from "@/assets/brandViewLogo.jpg";
-import logoHack from "@/assets/hacksl.jpg";
 import logoApiFlora from "@/assets/logo_api_flora.png";
 import logoSunday2 from "@/assets/logo_aruna.jpg";
+import logoBrandView from "@/assets/logo_brandView.jpg";
 import logoCodeFiline from "@/assets/logo_code_filine.png";
-import logoictFromAbc from "@/assets/logo_ictFromAbc.png";
+import logoHack from "@/assets/logo_hacksl.jpg";
+import logoIctFromAbc from "@/assets/logo_ictFromAbc.png";
 import logoIsurumaan from "@/assets/logo_isurumaan.png";
 import logoPubudu from "@/assets/logo_pubudu_constructions.png";
 import logoSunday1 from "@/assets/logo_sunday_morning.png";
-import virakesariLogo from "@/assets/virakesariLogo.jpg";
+import logoVirakesari from "@/assets/logo_virakesari.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,7 +33,7 @@ export default function Sponsors() {
             <Link href="https://ictfromabc.com/">
               <Image
                 className="mt-6"
-                src={logoictFromAbc}
+                src={logoIctFromAbc}
                 alt="ICT From ABC"
                 width={300}
                 height={300}
@@ -49,7 +49,7 @@ export default function Sponsors() {
               <Image
                 className="mt-6"
                 src={logoBrandView}
-                alt="Code Filine"
+                alt="Brand View Labels"
                 width={150}
                 height={150}
               />
@@ -74,7 +74,7 @@ export default function Sponsors() {
           <Link href="https://www.virakesari.lk/">
             <Image
               className="mt-6"
-              src={virakesariLogo}
+              src={logoVirakesari}
               alt="Virakesari"
               width={300}
               height={300}

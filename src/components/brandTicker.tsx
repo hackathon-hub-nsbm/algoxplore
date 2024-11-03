@@ -1,6 +1,13 @@
+import logoApiFlora from "@/assets/logo_api_flora.png";
 import logoSunday2 from "@/assets/logo_aruna.jpg";
+import logoBrandView from "@/assets/logo_brandView.jpg";
+import logoCodeFiline from "@/assets/logo_code_filine.png";
+import logoHack from "@/assets/logo_hacksl.jpg";
+import logoIctFromAbc from "@/assets/logo_ictFromAbc.png";
+import logoIsurumaan from "@/assets/logo_isurumaan.png";
 import logoPubudu from "@/assets/logo_pubudu_constructions.png";
 import logoSunday1 from "@/assets/logo_sunday_morning.png";
+import logoVirakesari from "@/assets/logo_virakesari.jpg";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -8,21 +15,16 @@ const BrandTicker = () => {
   const [position, setPosition] = useState(0);
 
   const sponsors = [
-    {
-      id: 1,
-      name: "The Sunday Morning",
-      imageUrl: logoSunday1,
-    },
-    {
-      id: 2,
-      name: "Aruna",
-      imageUrl: logoSunday2,
-    },
-    {
-      id: 3,
-      name: "Pubudu Cnstructions",
-      imageUrl: logoPubudu,
-    },
+    { id: 1, name: "Pubudu Constructions", imageUrl: logoPubudu },
+    { id: 2, name: "ICT From ABC", imageUrl: logoIctFromAbc },
+    { id: 3, name: "Brand View Labels", imageUrl: logoBrandView },
+    { id: 4, name: "Hack SL", imageUrl: logoHack },
+    { id: 5, name: "Virakesari", imageUrl: logoVirakesari },
+    { id: 6, name: "Aruna", imageUrl: logoSunday1 },
+    { id: 7, name: "Aruna", imageUrl: logoSunday2 },
+    { id: 8, name: "Api Flora", imageUrl: logoApiFlora },
+    { id: 9, name: "Isurumaan Photography", imageUrl: logoIsurumaan },
+    { id: 10, name: "Code Filine", imageUrl: logoCodeFiline },
   ];
 
   useEffect(() => {
@@ -43,39 +45,30 @@ const BrandTicker = () => {
       <div className="relative h-20 flex items-center justify-center">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-[#38ac38] opacity-5 animate-pulse" />
-          <div className="absolute top-0 left-0 w-16 h-16 border-t border-l border-[#38ac38] opacity-50" />
-          <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-[#38ac38] opacity-50" />
-          <div className="absolute bottom-0 left-0 w-16 h-16 border-b border-l border-[#38ac38] opacity-50" />
-          <div className="absolute bottom-0 right-0 w-16 h-16 border-b border-r border-[#38ac38] opacity-50" />
+          {["top-left", "top-right", "bottom-left", "bottom-right"].map(
+            (pos) => (
+              <div
+                key={pos}
+                className={`absolute ${pos} w-16 h-16 border-opacity-50 border-[#38ac38] border-t border-l`}
+              />
+            ),
+          )}
         </div>
 
-        {sponsors.map((sponsor, index) => (
+        {sponsors.map(({ id, name, imageUrl }, index) => (
           <div
-            key={sponsor.id}
+            key={id}
             className={`absolute w-full transition-all duration-700 ease-in-out transform
-              ${
-                index === position
-                  ? "translate-x-0 opacity-100"
-                  : index < position
-                    ? "-translate-x-full opacity-0"
-                    : "translate-x-full opacity-0"
-              }`}
+              ${index === position ? "translate-x-0 opacity-100" : index < position ? "-translate-x-full opacity-0" : "translate-x-full opacity-0"}`}
           >
-            <div className="hidden lg:flex items-center justify-center p-4">
+            <div
+              className={`flex items-center justify-center p-4 ${index === position ? "lg:flex" : "lg:hidden"}`}
+            >
               <Image
-                width={190}
-                height={190}
-                src={sponsor.imageUrl}
-                alt={sponsor.name}
-                className="filter brightness-150 contrast-125"
-              />
-            </div>
-            <div className="flex items-center justify-center p-4 lg:hidden">
-              <Image
-                width={160}
-                height={160}
-                src={sponsor.imageUrl}
-                alt={sponsor.name}
+                width={index === position ? 190 : 160}
+                height={index === position ? 190 : 160}
+                src={imageUrl}
+                alt={name}
                 className="max-h-24 w-auto object-contain filter brightness-150 contrast-125"
               />
             </div>
