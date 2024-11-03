@@ -90,8 +90,8 @@ export default function Sponsors() {
                 className="mt-6"
                 src={logoSunday1}
                 alt="The Sunday Morning"
-                width={190}
-                height={190}
+                width={270}
+                height={270}
               />
             </Link>
             <Link href="https://www.aruna.lk/">
