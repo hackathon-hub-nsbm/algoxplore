@@ -28,6 +28,7 @@ export default function Sponsors() {
               />
             </Link>
           </div>
+
           <div className="flex flex-col items-center">
             <p className="text text-center">Official Bronze Partner</p>
             <Link href="https://ictfromabc.com/">
@@ -124,7 +125,7 @@ export default function Sponsors() {
             <p className="text text-center">Official Media Partner</p>
             <Link href="https://isurumaan.com/">
               <Image
-                className="mt-6"
+                className="mt-6 bg-white"
                 src={logoIsurumaan}
                 alt="Isurumaan Photography"
                 width={300}
@@ -136,7 +137,7 @@ export default function Sponsors() {
             <p className="text text-center">Official Gift Partner</p>
             <Link href="https://www.codefiline.com/">
               <Image
-                className="mt-6"
+                className="mt-6 bg-white px-3 py-1"
                 src={logoCodeFiline}
                 alt="Code Filine"
                 width={300}
