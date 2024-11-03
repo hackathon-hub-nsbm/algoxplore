@@ -1,6 +1,4 @@
-import apiFloraLogo from "@/assets/api-flora.png";
 import logoBrandView from "@/assets/brandViewLogo.jpg";
-import logoGreenBlack from "@/assets/green-black.png";
 import logoHack from "@/assets/hacksl.jpg";
 import logoApiFlora from "@/assets/logo_api_flora.png";
 import logoSunday2 from "@/assets/logo_aruna.jpg";
