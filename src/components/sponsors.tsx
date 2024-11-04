@@ -138,7 +138,7 @@ export default function Sponsors() {
             <p className="text text-center">Official Food Partner</p>
             <Link href="https://shop.uswatte.lk/">
               <Image
-                className="mt-6"
+                className="mt-6 bg-white p-2"
                 src={logoUswatta}
                 alt="Uswatta"
                 width={200}
