@@ -6,7 +6,9 @@ import logoCodeFiline from "@/assets/logo_code_filine.png";
 import logoictFromAbc from "@/assets/logo_ictFromAbc.png";
 import logoIsurumaan from "@/assets/logo_isurumaan.png";
 import logoPubudu from "@/assets/logo_pubudu_constructions.png";
+import logoRealMe from "@/assets/logo_realme.jpg";
 import logoSunday1 from "@/assets/logo_sunday_morning.png";
+import logoUswatta from "@/assets/logo_uswatta.png";
 import virakesariLogo from "@/assets/virakesariLogo.jpg";
 import Image from "next/image";
 import Link from "next/link";
@@ -68,6 +70,18 @@ export default function Sponsors() {
               />
             </Link>
           </div>
+          <div className="flex flex-col items-center">
+            <p className="text text-center">Official T-Shirt Partner</p>
+            <Link href="https://www.facebook.com/p/Real-Me-Tshirts-100083012007208/">
+              <Image
+                className="mt-6"
+                src={logoRealMe}
+                alt="Real Me"
+                width={150}
+                height={150}
+              />
+            </Link>
+          </div>
         </div>
 
         <div className="flex flex-col items-center">
@@ -107,17 +121,31 @@ export default function Sponsors() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center">
-          <p className="text text-center">Official Gift Partner</p>
-          <Link href="https://apiflora.lk/">
-            <Image
-              className="mt-6"
-              src={logoApiFlora}
-              alt="Api Flora"
-              width={200}
-              height={200}
-            />
-          </Link>
+        <div className="flex gap-10 justify-center">
+          <div className="flex flex-col items-center">
+            <p className="text text-center">Official Gift Partner</p>
+            <Link href="https://apiflora.lk/">
+              <Image
+                className="mt-6"
+                src={logoApiFlora}
+                alt="Api Flora"
+                width={200}
+                height={200}
+              />
+            </Link>
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text text-center">Official Food Partner</p>
+            <Link href="https://shop.uswatte.lk/">
+              <Image
+                className="mt-6 bg-white p-2"
+                src={logoUswatta}
+                alt="Uswatta"
+                width={200}
+                height={200}
+              />
+            </Link>
+          </div>
         </div>
 
         <div className="flex gap-10 justify-center">
