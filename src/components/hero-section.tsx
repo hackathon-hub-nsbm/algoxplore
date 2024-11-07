@@ -15,7 +15,7 @@ export default function About({
             onClick={() => setActiveTab("REGISTRATION")}
             className="text-center py-[5px] px-[30px] sm:text-xl lg:text-2xl tracking-widest bg-[#38ac38] text-black"
           >
-            REGISTER NOW
+            REGISTRATIONS ARE NOW CLOSED!
           </Link>
         </div>
         <p className="text mx-10 text-center p-2 pb-0 mt-10 mb-5 lg:text-justify lg:mt-10">
