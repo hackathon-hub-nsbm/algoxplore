@@ -16,7 +16,7 @@ export default function Home() {
   const tabs: Array<string> = [
     "ALGXPLR",
     "TIMELINE",
-    "REGISTRATION",
+    // "REGISTRATION",
     "ABOUT_US",
     "SPONSORS",
     "FAQ",
