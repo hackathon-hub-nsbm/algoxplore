@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    @keyframes flicker {
+      0% {
+        opacity: 0.98;
+      }
+
+      5% {
+        opacity: 0.95;
+      }
+
+      10% {
+        opacity: 0.97;
+      }
+
+      15% {
+        opacity: 0.94;
+      }
+
+      20% {
+        opacity: 0.98;
+      }
+
+      50% {
+        opacity: 0.95;
+      }
+
+      80% {
+        opacity: 0.98;
+      }
+
+      90% {
+        opacity: 0.96;
+      }
+
+      100% {
+        opacity: 0.98;
+      }
+    }
+
+    @keyframes shadow-flicker {
+      0% {
+        box-shadow: 0 0 100px #00ff007c;
+      }
+
+      250% {
+        box-shadow: 0 0 130px #00ff007c;
+      }
+
+      75% {
+        box-shadow: 0 0 50px #00ff007c;
+      }
+
+      100% {
+        box-shadow: 0 0 100px #00ff007c;
+      }
+    }
+
+    @keyframes scanline {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(100%);
+      }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000000;
+      font-family: 'IBM Plex Mono', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 90%;
+      color: #00ff00;
+      max-height: 80vh;
+      overflow-y: auto;
+      border: 1px solid #00ff00b4;
+      box-shadow: 0 0 100px #00ff007c;
+      border-radius: 10px;
+      padding: 35px 55px;
+      background-color: #000000;
+      position: relative;
+      transform: rotateX(5deg);
+      animation: flicker 0.15s infinite;
+      animation: shadow-flicker 5s infinite;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at center,
+          transparent 0%,
+          rgba(0, 0, 0, 0.1) 90%);
+      border-radius: 100%;
+      transform: perspective(1000px) rotateX(0deg);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .ctr-filter {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) perspective(1000px) rotateX(0deg);
+      width: calc(90% + 110px);
+      max-width: 710px;
+      height: calc(270vh + 70px);
+      pointer-events: none;
+      z-index: 1000;
+      border-radius: 10px;
+      overflow: hidden;
+      animation: flicker 0.15s infinite;
+    }
+
+    .ctr-filter::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(transparent 50%, rgba(0, 255, 0, 0.05) 50%);
+      background-size: 100% 8px;
+      pointer-events: none;
+    }
+
+    .ctr-filter::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: linear-gradient(rgba(0, 255, 0, 0.15), transparent 6px);
+      animation: scanline 10s linear infinite;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      transform: scale(0.98);
+    }
+
+    /* Rest of your existing styles remain the same */
+    .logo-section {
+      text-align: center;
+    }
+
+    .logo-section img {
+      width: 500px;
+      max-width: 100%;
+      filter: brightness(1.2) saturate(1.2);
+    }
+
+    h1 {
+      font-size: 25px;
+      color: #00ff00;
+      margin: 0;
+      text-shadow: 0 0 5px #00ff00;
+    }
+
+    .text-content {
+      font-size: 16px;
+      line-height: 1.4;
+      text-align: justify;
+    }
+
+    .schedule-list,
+    .rules-list {
+      list-style: lower-alpha;
+      padding-left: 1.5em;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #00ff00;
+      border: 2px solid #00ff00;
+      color: black;
+      text-decoration: none;
+      padding: 10px 30px;
+      border-radius: 3px;
+      font-weight: 900;
+      margin: 15px 0;
+      font-size: large;
+      text-align: center;
+      text-shadow: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: black;
+      color: #00ff00;
+      box-shadow: 0 0 15px #00ff00;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links img {
+      width: 40px;
+      filter: invert(100%) sepia(100%) saturate(2000%) hue-rotate(90deg);
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .contact a {
+      font-size: 14px;
+      color: #00ff00;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .sub-container-centered {
+      display: flex;
+      justify-content: center;
+    }
+
+    .container::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .container::-webkit-scrollbar-track {
+      background: #000000;
+    }
+
+    .container::-webkit-scrollbar-thumb {
+      background: #00ff00;
+      border-radius: 4px;
+    }
+
+    /* Add vignette effect */
+    .container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at center,
+          transparent 60%,
+          rgba(0, 0, 0, 0.4) 100%);
+      pointer-events: none;
+      z-index: 1;
+      border-radius: 10px;
+    }
+
+    .schedule-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background: #000;
+      color: #00ff00;
+      /* border-left: 2px solid #00ff0063; */
+      padding-left: 20px;
+    }
+
+    .schedule-list li {
+      margin-bottom: 15px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .schedule-list li::before {
+      content: "- ";
+      color: #00ff0063;
+    }
+
+    .time {
+      color: #00ffff;
+    }
+
+    .event-name {
+      color: #ffff00;
+    }
+
+    .description {
+      display: block;
+      margin-left: 20px;
+      color: #888;
+      font-style: italic;
+      position: relative;
+    }
+
+    .description::before {
+      content: "# ";
+      color: #666;
+    }
+
+    h3 {
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      margin-bottom: 15px;
+      /* border-bottom: 1px solid #00ff0063; */
+      padding-bottom: 5px;
+    }
+
+    .image-container {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cropped-image {
+      width: 100%;
+      position: relative;
+      /* top: -100px; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="ctr-filter"></div>
+    <div class="content">
+      <div class="logo-section">
+        <div class="image-container">
+          <img src="https://i.ibb.co/gSKJwBw/noBg.png" alt="AlgoXplore Logo" class="cropped-image">
+        </div>
+      </div>
+
+      <h1>$ cat /usr/share/algxplr/vevent-invite.txt \<br />| sh /usr/team</h1>
+
+      <div class="text-content">
+        <p>
+          We're excited to have you join us at AlgoXplore 1.0 on November 11th! Get ready for an exciting
+          day of coding, creativity, and competition, where you'll have the opportunity to showcase your skills and
+          tackle
+          real-world challenges.
+        </p>
+
+        <h3>$ cat /usr/share/algxplr/agenda.yaml</h3>
+
+        <ul class="schedule-list">
+          <li>
+            <span class="time">"09:00"</span>:
+            <span class="event-name">introduction_session</span>
+            <span class="description">Join us as we kick off with a brief introduction and overview of the
+              competition.</span>
+          </li>
+          <li>
+            <span class="time">"10:00"</span>:
+            <span class="event-name">registration_process</span>
+            <span class="description">Complete your registration and get settled.</span>
+          </li>
+          <li>
+            <span class="time">"10:30"</span>:
+            <span class="event-name">competition_kickoff</span>
+            <span class="description">Begin your coding journey and dive into the challenges!</span>
+          </li>
+          <li>
+            <span class="time">"13:30"</span>:
+            <span class="event-name">competition_wrap_up</span>
+            <span class="description">The coding round ends, and we'll collect your submissions.</span>
+          </li>
+        </ul>
+
+        <p>
+          We're looking forward to a thrilling day of innovative solutions and impressive performances.
+          Whether you're here to win, learn, or connect with fellow tech enthusiasts, AlgoXplore 1.0 promises to be a
+          memorable
+          experience!
+        </p>
+
+        <div class="sub-container-centered" style="margin-bottom: 20px;">
+          <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_OGI4OTA5OGItYzgwMi00MDk2LWJlZDYtYjc1NDM5MTExOGIw%40thread.v2/0?context=%7b%22Tid%22%3a%229486ac65-39d3-4d25-977c-76d9c31c0046%22%2c%22Oid%22%3a%22f4457459-5da9-478d-bcb1-136a68dddeaf%22%7d"
+            class="cta-button">
+            ATTEND vEVENT [Microsoft Teams]
+          </a>
+        </div>
+
+        <h1>$ cat /usr/share/algxplr/first-round-rules.txt \<br />| sh /usr/team</h1>
+        <p>Rules For First Round,</p>
+        <ul class="rules-list">
+          <li>The top two teams from each group will advance to the second round. (There are 7 groups in total)</li>
+          <li>The highest-scoring third-place team across all groups will secure a wild card entry into the next round.
+          </li>
+          <li>The leaderboard will follow ACM standards for scoring and ranking.</li>
+          <li>A penalty of 1 will be applied for each incorrect submission.</li>
+          <li>The leaderboard will freeze during the final hour of the competition to heighten suspense and ensure fair
+            play.</li>
+          <li>Direct code sharing between teams is strictly prohibited and will lead to the immediate disqualifi$ cation
+            of both parties involved.</li>
+          <li>To participate in this challenge, you must be an undergraduate.</li>
+          <li>All participants must have registered via our website (<a
+              href="https://hackathon-hub-nsbm.github.io/algoxplore/">https://hackathon-hub-nsbm.github.io/algoxplore/</a>)
+            to be eligible for participation.</li>
+        </ul>
+
+        <p>
+          If you have any questions, don't hesitate to reach out to us. Bring your energy, ideas, and coding expertise
+          to the
+          competition. Let's make this an incredible event!
+          Best regards, and see you tomorrow ~
+          AlgoXplore 1.0 Team.
+        </p>
+      </div>
+
+      <div>
+        <div class="social-links">
+          <a href="https://web.facebook.com/people/Hackathon-Hub/61556983036529/">
+            <img src="https://i.ibb.co/T4kjCy5/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/hackathonhub.nsbm/">
+            <img src="https://i.ibb.co/47sfL0S/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com/company/hackathon-hub-nsbm/">
+            <img src="https://i.ibb.co/cwZtnhb/linkedin.png" alt="LinkedIn">
+          </a>
+        </div>
+
+        <div class="contact">
+          <a href="tel:+94772111426">
+            +94 77 211 1426 ~ AlgoXplore Event Coordinator (Mandinu)
+            <br /><br />
+            EOFERROR: End of file When reading a line
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
