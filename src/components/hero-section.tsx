@@ -2,17 +2,14 @@ import Link from "next/link";
 import BrandTicker from "./brandTicker";
 import Countdown from "./countdown";
 
-export default function About({
-  setActiveTab,
-}: { setActiveTab: (tab: string) => void }) {
+export default function About() {
   return (
     <div>
       <div className="border-cover">
         <Countdown />
         <div className="flex flex-col items-center text">
           <Link
-            href="#"
-            onClick={() => setActiveTab("REGISTRATION")}
+            href="/"
             className="text-center py-[5px] px-[30px] sm:text-xl lg:text-2xl tracking-widest bg-[#38ac38] text-black"
           >
             REGISTRATIONS ARE NOW CLOSED!
