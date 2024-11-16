@@ -1,5 +1,5 @@
 self.onmessage = function () {
-  const targetDate = new Date("2024-11-06T23:59:59").getTime();
+  const targetDate = new Date("2024-11-18T23:59:59").getTime();
 
   const calculateTimeLeft = () => {
     const now = new Date().getTime();
